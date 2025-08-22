@@ -1,17 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos - Login</title>
+    <!-- Google Icon Font -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #42a5f5 0%, #7e57c2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Roboto', sans-serif;
+        }
+        .login-card {
+            padding: 40px 32px 32px 32px;
+            border-radius: 16px;
+            background: #fff;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+            width: 100%;
+            max-width: 370px;
+            animation: fadeIn 1s;
+        }
+        .login-title {
+            margin-bottom: 28px;
+            text-align: center;
+            color: #6c63ff;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .input-field .material-icons {
+            color: #6c63ff;
+        }
+        .input-field input:focus + label {
+            color: #6c63ff !important;
+        }
+        .input-field input:focus {
+            border-bottom: 2px solid #6c63ff !important;
+            box-shadow: 0 1px 0 0 #6c63ff !important;
+        }
+        .login-actions {
+            margin-top: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .forgot-link {
+            text-align: right;
+            font-size: 0.95em;
+        }
+        .forgot-link a {
+            color: #7e57c2;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .forgot-link a:hover {
+            color: #42a5f5;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+    </style>
 </head>
 <body>
-    <h1>hola hjyuyjgj es</h1>
-    <p>estamos enjihyfghy desarrollo</p>
-
-    <p>estoy en mani despues de hacer un merge</p>
-   <p> estiy en canbio de desarroolo
-    <p>lucho jode</p>
-<p>el main antes del conflicto</p>
+    <div class="login-card z-depth-2">
+        <h5 class="login-title">Iniciar Sesión</h5>
+        <form action="" method="get" autocomplete="off">
+            <div class="input-field">
+                <i class="material-icons prefix">account_circle</i>
+                <input type="text" id="username" name="username" required>
+                <label for="username">Usuario</label>
+            </div>
+            <div class="input-field">
+                <i class="material-icons prefix">lock</i>
+                <input type="password" id="password" name="password" required>
+                <label for="password">Contraseña</label>
+            </div>
+            <div class="forgot-link">
+                <a href="#">¿Olvidaste tu contraseña?</a>
+            </div>
+            <div class="login-actions">
+                <button class="btn waves-effect waves-light purple accent-3" type="submit" style="width:100%">
+                    Entrar
+                    <i class="material-icons right">send</i>
+                </button>
+                <button class="btn-flat" type="button" style="width:100%; color:#6c63ff;">
+                    Registrarse
+                </button>
+            </div>
+        </form>
+    </div>
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>
